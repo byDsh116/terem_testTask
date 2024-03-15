@@ -9,10 +9,16 @@
     <title>Тест</title>
 </head>
 <body>
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Привет, мир!</p>
+        </div>
+    </div>
     <div class="container">
         <div class="full-width"><h1>заголовок H1 с надписью</h1></div>
         <div class="three-blocks">
-          <div>Блок 1</div>
+          <div class='block-1'>Блок 1</div>
           <div class='dashed'>Блок 2</div>
           <div>Блок 3</div>
         </div>
@@ -24,11 +30,20 @@
 
     <script src='jquery-3.7.1.js'></script>
     <script>
-        $(document).ready(function() {
+       $(document).ready(function() {
     $('.btn-outline-warning').click(function() {
         $('.full-width').toggle();
     });
+
+    $(".modal").show();
+
+    $(".close").click(function() {
+        $(".modal").hide();
+    });
+
 });
+
+
 </script>
 
     
